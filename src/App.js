@@ -5,6 +5,7 @@ import Intro from "./components/navbar/intro/Intro";
 import Services from "./components/services/Services";
 import Experience from "./components/experience/Experience";
 import Works from "./components/works/Works";
+import Portfolio from "./components/portfolio/Portfolio";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Services />
       <Experience />
       <Works />
+      <Portfolio />
     </div>
   );
 }
