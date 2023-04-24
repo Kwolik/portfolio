@@ -6,14 +6,20 @@ import Ecommerce from "../../img/ecommerce.png";
 import MusicApp from "../../img/musicapp.png";
 import HOC from "../../img/hoc.png";
 
+import { themeContext } from "../../Context";
+import { useContext } from "react";
+
 register();
 
 const Portfolio = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
+
   //Dopracowac pozniej jeszcze ta sekcje
   return (
     <div className="portfolio">
       {/*  heading */}
-      <span>Recent Projects</span>
+      <span style={{ color: darkMode ? "white" : "" }}>Recent Projects</span>
       <span>Portfolio</span>
 
       <div className="portfolio-slider">

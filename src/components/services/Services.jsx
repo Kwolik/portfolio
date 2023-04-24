@@ -6,12 +6,18 @@ import humble from "../../img/humble.png";
 import Card from "../card/Card";
 import Resume from "./Resume.pdf";
 
+import { themeContext } from "../../Context";
+import { useContext } from "react";
+
 const Services = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
+
   return (
     <div className="services">
       {/* Left side */}
       <div className="awesome">
-        <span>My Awesome</span>
+        <span style={{ color: darkMode ? "white" : "" }}>My Awesome</span>
         <span>services</span>
         <spane>
           Lorem ipsum <br /> Lorem ipsum
