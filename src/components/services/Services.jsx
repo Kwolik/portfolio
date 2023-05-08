@@ -8,10 +8,12 @@ import Resume from "./Resume.pdf";
 
 import { themeContext } from "../../Context";
 import { useContext } from "react";
+import { motion } from "framer-motion";
 
 const Services = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+  const transition = { duration: 1, type: "spring" };
 
   return (
     <div className="services">
@@ -31,13 +33,18 @@ const Services = () => {
 
       {/* Right side */}
       <div className="cards">
-        <div style={{ left: "14rem" }}>
+        <motion.div
+          initial={{ left: "25rem" }}
+          whileInView={{ left: "14rem" }}
+          transition={transition}
+          style={{ left: "14rem" }}
+        >
           <Card
             emoji={heartemoji}
             heading={"Design"}
             detail="Figma, Sketch, Photoshop, Adobe, Adobe XD"
           />
-        </div>
+        </motion.div>
 
         <div style={{ top: "12rem", left: "-4rem" }}>
           <Card
